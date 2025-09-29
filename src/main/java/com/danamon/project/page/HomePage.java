@@ -56,6 +56,9 @@ public class HomePage {
     @FindBy(xpath = "//tr[@class='odd']/td[text()='MOD']")
     private WebElement validasiMODTrx;
 
+    @FindBy(xpath = "//tr[@class='odd']/td[text()='AUTH']")
+    private WebElement validasiAUTHTrx;
+
     @FindBy(how = How.XPATH, using = "//span[@class='dir']")
     public WebElement processText;
 
@@ -148,5 +151,11 @@ public class HomePage {
                 .moveToElement(modificationLink)
                 .perform();
         modificationLink.click();
+    }
+    public String authValidation(){
+        if (driver == null || validasiAUTHTrx == null) {
+            return "";
+        }
+        return validasiAUTHTrx.getText();
     }
 }

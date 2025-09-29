@@ -33,6 +33,10 @@ public class VerificationPage {
     @FindBy(how = How.CSS, using = "input#modified[name='modified']")
     public WebElement modifyButton;
 
+    // XPath Selector untuk authorize button
+    @FindBy(xpath = "//input[@id='authorized']")
+    private WebElement authorizeButton;
+
     public VerificationPage(WebDriver driver) {
         this.driver= DriverSingleton.getDriver();
         PageFactory.initElements(this.driver,this);
@@ -46,5 +50,10 @@ public class VerificationPage {
     public void BtnMod() {
         new WebDriverWait(driver, Duration.ofSeconds(Constants.TIMEOUT_DELAY))
                 .until(ExpectedConditions.visibilityOf(modifyButton)).click();
+    }
+
+    public void BtnAuth() {
+        new WebDriverWait(driver, Duration.ofSeconds(Constants.TIMEOUT_DELAY))
+                .until(ExpectedConditions.visibilityOf(authorizeButton)).click();
     }
 }
