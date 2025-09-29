@@ -24,7 +24,7 @@ import java.time.Duration;
 public class VerificationPage {
     private WebDriver driver;
 
-    @FindBy(xpath = "//a[normalize-space()='TESAUTOMATION15']")
+    @FindBy(xpath = "//a[normalize-space()='TESAUTOMATION20']")
     public WebElement trxview;
 
     @FindBy(xpath = "//input[@id='modified']")

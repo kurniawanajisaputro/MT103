@@ -27,7 +27,7 @@ import java.time.Duration;
 public class ModificationPage {
     private WebDriver driver;
 
-    @FindBy(xpath = "//a[normalize-space()='TESAUTOMATION15']")
+    @FindBy(xpath = "//a[normalize-space()='TESAUTOMATION20']")
     public WebElement trxview;
     @FindBy(xpath = "//input[@id='_010_mf20_sender_reference']")
     private WebElement tag20;

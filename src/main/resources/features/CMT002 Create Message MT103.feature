@@ -20,4 +20,4 @@ Feature: Create MT103 002
 
     Examples:
       | receiver | reference | tag32AC | tag32AA | tag50bic | tag59bic |
-      | BDINIDJAXXXX | TESAUTOMATION15 | USD | 1 | BDINIDJAXXXX | BDINIDJAXXXX |
+      | BDINIDJAXXXX | TESAUTOMATION20 | USD | 1 | BDINIDJAXXXX | BDINIDJAXXXX |
