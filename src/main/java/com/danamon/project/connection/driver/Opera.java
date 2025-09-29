@@ -21,7 +21,6 @@ public class Opera implements DriverStrategy{
         WebDriverManager.operadriver().setup();
         WebDriver driver = (WebDriver) new OperaDriverManager();
 
-
         return driver;
     }
 }
