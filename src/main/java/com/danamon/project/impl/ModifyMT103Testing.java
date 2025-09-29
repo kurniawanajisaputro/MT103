@@ -31,12 +31,14 @@ public class ModifyMT103Testing {
     public HomePage homePage;
     public ModificationPage modificationPage;
     public VerificationPage verificationPage;
+    public MT103Page mt103Page;
     public ModifyMT103Testing() {
         this.driver = LoginOutlineHooks.driver;
         loginPage = new LoginPage(driver);
         homePage = new HomePage(driver);
         modificationPage = new ModificationPage(driver);
         verificationPage = new VerificationPage(driver);
+        mt103Page = new MT103Page(driver);
         extentTest = LoginOutlineHooks.extentTest;
     }
     @When("MT103003 Validasi Log In")
@@ -87,7 +89,7 @@ public class ModifyMT103Testing {
         extentTest.log(LogStatus.PASS, "MT103001 Click Button Verification Page");
     }
     @And("MT103003 Validasi MOD")
-    public void mt103003_validasi_VER() {
+    public void mt103003_validasi_mod() {
         delay(Constants.TIMEOUT_DELAY);
         String modValidation = homePage.modValidation();
         System.out.println("Berhasil Berubah MOD");
@@ -101,7 +103,7 @@ public class ModifyMT103Testing {
         extentTest.log(LogStatus.PASS, "MT103002 Click Log Out");
     }
     @When("MT103004 Validasi Log In")
-    public void mt103004_validas2_log_in() {
+    public void mt103004_validasi_log_in() {
         GlobalFunction.delay(Constants.TIMEOUT_DELAY);
         String LoginValidation = loginPage.LoginValidation();
         Assert.assertEquals(LoginValidation, "");
@@ -123,8 +125,14 @@ public class ModifyMT103Testing {
         System.out.println("Berhasil masuk homepage danamon sebagai maker");
         Assert.assertEquals(HomePageValidation, "");
     }
-    @And("MT103004 Click Button Verification Page")
-    public void mt103004_click_button_verification_page() {
+    @And("MT103004 Click Button Login Form")
+    public void mt103004_click_button_log_in_form() {
+        GlobalFunction.delay(Constants.TIMEOUT_DELAY);
+        this.loginPage.Btnlogin();
+        extentTest.log(LogStatus.PASS, "MT103001 Click Button Login Form");
+    }
+    @And("MT103004 Click Button Modification Page")
+    public void mt103004_click_button_modification_page() {
         GlobalFunction.delay(Constants.TIMEOUT_DELAY);
         this.homePage.BtnModification();
         extentTest.log(LogStatus.PASS, "MT103001 Click Button Verification Page");
@@ -134,5 +142,42 @@ public class ModifyMT103Testing {
         GlobalFunction.delay(Constants.TIMEOUT_DELAY);
         this.modificationPage.ViewTRXMOD();
         extentTest.log(LogStatus.PASS, "MT103001 Click Button View TRX");
+    }
+    @And("MT103004 Click Body")
+    public void mt103004_click_body() {
+        GlobalFunction.delay(Constants.TIMEOUT_DELAY);
+        this.modificationPage.BodyMT103();
+        extentTest.log(LogStatus.PASS, "MT103002 Click Body");
+    }
+    @And("^MT103004 Input Reference (.*) Yang Valid")
+    public void mt103004_input_reference(String tag20) {
+        this.modificationPage.TAG20(tag20);
+        extentTest.log(LogStatus.PASS, "MT103002 Input TextField (.*) Yang Valid Kedua");
+    }
+    @And("MT103004 Click Button Validate")
+    public void mt103004_click_button_validate() {
+        GlobalFunction.delay(Constants.TIMEOUT_DELAY);
+        this.modificationPage.clickValidateButton();
+        extentTest.log(LogStatus.PASS, "MT103001 Click Button View TRX");
+    }
+    @And("MT103004 Click Button Save")
+    public void mt103004_click_button_save() {
+        GlobalFunction.delay(Constants.TIMEOUT_DELAY);
+        this.modificationPage.btnSubmit();
+        extentTest.log(LogStatus.PASS, "MT103001 Click Button View TRX");
+    }
+    @And("MT103004 Validasi VER")
+    public void mt103004_validasi_VER() {
+        delay(Constants.TIMEOUT_DELAY);
+        String verValidation = homePage.verValidation();
+        System.out.println("Berhasil masuk TRX VER");
+        Assert.assertEquals(verValidation, "VER");
+    }
+    @Then("MT103004 Click Log Out")
+    public void mt103004_klik_log_out(){
+        delay(Constants.TIMEOUT_DELAY);
+        this.homePage.Btnlogout();
+        System.out.println("Berhasil Log Out Sebagai Checker");
+        extentTest.log(LogStatus.PASS, "MT103002 Click Log Out");
     }
 }

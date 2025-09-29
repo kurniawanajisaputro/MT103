@@ -31,10 +31,12 @@ public class ModificationPage {
     public WebElement trxview;
     @FindBy(xpath = "//input[@id='_010_mf20_sender_reference']")
     private WebElement tag20;
+    @FindBy(xpath = "//a[normalize-space()='Body']")
+    private WebElement klikbody;
     @FindBy(xpath = "//input[@id='btn-validate']")
     private WebElement klikbuttonvalidate;
     @FindBy(xpath = "//input[@id='submit_mt']")
-    private WebElement klikbuttonsubmit;
+    private WebElement klikbuttonsave;
 
     public ModificationPage(WebDriver driver) {
         this.driver= DriverSingleton.getDriver();
@@ -44,6 +46,11 @@ public class ModificationPage {
     public void ViewTRXMOD() {
         new WebDriverWait(driver, Duration.ofSeconds(Constants.TIMEOUT_DELAY))
                 .until(ExpectedConditions.visibilityOf(trxview)).click();
+    }
+    //klik body
+    public void BodyMT103() {
+        new WebDriverWait(driver, Duration.ofSeconds(Constants.TIMEOUT_DELAY))
+                .until(ExpectedConditions.visibilityOf(klikbody)).click();
     }
     //Input Reference
     public void TAG20(String reference){
@@ -106,7 +113,7 @@ public class ModificationPage {
             System.out.println("No alert to force handle");
         }
     }
-    //klik Button Validate
+    //klik Button Submit
     public void btnSubmit() {
         try {
             // 1. Tangani alert terlebih dahulu SEBELUM mencari element
@@ -114,7 +121,7 @@ public class ModificationPage {
 
             // 2. Sekarang cari dan klik element button submit
             new WebDriverWait(driver, Duration.ofSeconds(Constants.TIMEOUT_DELAY))
-                    .until(ExpectedConditions.visibilityOf(klikbuttonsubmit)).click();
+                    .until(ExpectedConditions.visibilityOf(klikbuttonsave)).click();
 
             // 3. Tangani alert yang mungkin muncul setelah klik
             handleAlertIfPresent();
