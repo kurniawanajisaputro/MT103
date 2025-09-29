@@ -77,7 +77,7 @@ public class MT103Page {
     //klik sender receiver
     public void senderheader() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("document.querySelector('select#sender_logical_terminal').value = 'BDINIDJAXCUS';");
+        js.executeScript("document.querySelector('select#sender_logical_terminal').value = 'BDINIDJAXTRS';");
     }
     //Mengisi bagian receiver header
     public void receiverheader(String receiver){

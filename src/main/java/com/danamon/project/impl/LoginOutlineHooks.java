@@ -26,7 +26,7 @@ public class LoginOutlineHooks {
     public static ExtentTest extentTest;
     public static ExtentReports reports = new ExtentReports(GlobalFunction.rootProject + "/practiceautomation-report/extentreport/login.html");
     private static SkenarioCreateUser[] tests = SkenarioCreateUser.values();
-    private static final int[] DATA_OUTLINE = {1, 1, 1, 1, 1, 1};
+    private static final int[] DATA_OUTLINE = {1, 1, 1, 1, 1, 1, 1};
     private String testReport = "";
 
     @Before

@@ -59,17 +59,14 @@ public class HomePage {
     @FindBy(xpath = "//tr[@class='odd']/td[text()='AUTH']")
     private WebElement validasiAUTHTrx;
 
-    @FindBy(how = How.XPATH, using = "//span[@class='dir']")
-    public WebElement processText;
+    @FindBy(xpath = "//span[normalize-space()='Outgoing']")
+    private WebElement btnOutgoing;
 
-    @FindBy(how = How.CSS, using = "span.dir")
-    public WebElement outgoingText;
+    @FindBy(xpath = "//a[normalize-space()='Verification']")
+    private WebElement btnVerification;
 
-    @FindBy(how = How.CSS, using = "a[href*='controllerHeaders'][href*='flag=VER']")
-    public WebElement verificationLink;
-
-    @FindBy(how = How.CSS, using = "a[href*='controllerHeaders'][href*='flag=MOD']")
-    public WebElement modificationLink;
+    @FindBy(xpath = "//a[normalize-space()='Modification']")
+    private WebElement btnModification;
 
     public HomePage(WebDriver driver) {
         this.driver= DriverSingleton.getDriver();
@@ -135,22 +132,22 @@ public class HomePage {
             throw new IllegalStateException("WebDriver is null! Pastikan driver sudah di-set sebelum memanggil method ini.");
         }
         Actions actions = new Actions(driver);
-        actions.moveToElement(processText)
-                .moveToElement(outgoingText)
-                .moveToElement(verificationLink)
+        actions.moveToElement(btnProcess)
+                .moveToElement(btnOutgoing)
+                .moveToElement(btnVerification)
                 .perform();
-        verificationLink.click();
+        btnVerification.click();
     }
     public void BtnModification() {
         if (driver == null) {
             throw new IllegalStateException("WebDriver is null! Pastikan driver sudah di-set sebelum memanggil method ini.");
         }
         Actions actions = new Actions(driver);
-        actions.moveToElement(processText)
-                .moveToElement(outgoingText)
-                .moveToElement(modificationLink)
+        actions.moveToElement(btnProcess)
+                .moveToElement(btnOutgoing)
+                .moveToElement(btnModification)
                 .perform();
-        modificationLink.click();
+        btnModification.click();
     }
     public String authValidation(){
         if (driver == null || validasiAUTHTrx == null) {

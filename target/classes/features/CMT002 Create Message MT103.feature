@@ -16,9 +16,8 @@ Feature: Create MT103 002
     And MT103002 Click Validate
     And MT103002 Click Submit
     And MT103002 Validasi VER
-    And MT103002 Click Log Out
-    Then MT103002 Validasi Log In
+    Then MT103002 Click Log Out
 
     Examples:
       | receiver | reference | tag32AC | tag32AA | tag50bic | tag59bic |
-      | BDINIDJAXXXX | TESAUTOMATION10 | USD | 1 | BDINIDJAXXXX | BDINIDJAXXXX |
+      | BDINIDJAXXXX | TESAUTOMATION15 | USD | 1 | BDINIDJAXXXX | BDINIDJAXXXX |

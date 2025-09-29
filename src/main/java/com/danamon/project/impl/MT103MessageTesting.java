@@ -136,17 +136,11 @@ public class MT103MessageTesting {
         System.out.println("Berhasil masuk TRX VER");
         Assert.assertEquals(verValidation, "VER");
     }
-    @And("MT103002 Click Log Out")
+    @Then("MT103002 Click Log Out")
     public void mt103002_klik_log_out(){
         delay(Constants.TIMEOUT_DELAY);
         this.homePage.Btnlogout();
         System.out.println("Berhasil Log Out");
         extentTest.log(LogStatus.PASS, "MT103002 Click Log Out");
-    }
-    @Then("MT103002 Validasi Log In")
-    public void mt103001_validas2_log_in() {
-        GlobalFunction.delay(Constants.TIMEOUT_DELAY);
-        String LoginValidation = loginPage.LoginValidation();
-        Assert.assertEquals(LoginValidation, "");
     }
 }

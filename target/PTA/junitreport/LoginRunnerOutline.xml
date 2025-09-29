@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="5" time="157.212">
+    <testcase classname="Login MT103 Page 001" name="CMT001 Login Message" time="37.466">
+        <system-out><![CDATA[When MT103001 Membuka Halaman CM............................................passed
+And MT103001 Klik Button Advance............................................passed
+And MT103001 Klik Button IP Danamon.........................................passed
+And MT103001 Validasi Log In................................................passed
+And MT103001 Input Username admin2 Yang Valid...............................passed
+And MT103001 Input Password adminadmin Yang Valid...........................passed
+And MT103001 Click Button Login Form........................................passed
+And MT103001 Validasi Homepage..............................................passed
+Then MT103001 Klik Create Message MT103.....................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Create MT103 002" name="CMT002 Create Message MT103" time="64.329">
+        <system-out><![CDATA[And MT103002 Click Sender Header............................................passed
+And MT103002 Input Receiver Header BDINIDJAXXXX Yang Valid..................passed
+And MT103002 Click Body.....................................................passed
+And MT103002 Input Reference TESAUTOMATION15 Yang Valid.....................passed
+And MT103002 Click Tag23B...................................................passed
+And MT103002 Input tag32Acurr USD Yang Valid................................passed
+And MT103002 Input tag32AAmount 1  Yang Valid...............................passed
+And MT103002 Click Tag50 A Identifiercode...................................passed
+And MT103002 Input Tag 50 Bic BDINIDJAXXXX Yang Valid.......................passed
+And MT103002 Click Tag59 A Identifiercode...................................passed
+And MT103002 Input Tag 59 Bic BDINIDJAXXXX Yang Valid.......................passed
+And MT103002 Click Tag 71 OUR...............................................passed
+And MT103002 Click Validate.................................................passed
+And MT103002 Click Submit...................................................passed
+And MT103002 Validasi VER...................................................passed
+Then MT103002 Click Log Out.................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="VER MT103 003" name="CMT003 VER Message MT103" time="34.082">
+        <failure message="unexpected alert open: {Alert text : Do you want to modified this Message..!!}&#10;  (Session info: chrome=140.0.7339.208): Do you want to modified this Message..!!&#10;Build info: version: '4.19.1', revision: 'abe0ee07dc'&#10;System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.16'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [7b6a097e409862214fcb93d54c5176b5, findElement {using=xpath, value=//tr[@class='odd']/td[text()='MOD']}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\vensys\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53771}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53771/devtoo..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 7b6a097e409862214fcb93d54c5176b5" type="org.openqa.selenium.UnhandledAlertException"><![CDATA[When MT103003 Validasi Log In...............................................passed
+And MT103003 Input Username admin1 Yang Valid...............................passed
+And MT103003 Input Password adminadmin Yang Valid...........................passed
+And MT103003 Click Button Login Form........................................passed
+And MT103003 Validasi Homepage..............................................passed
+And MT103003 Click Button Verification Page.................................passed
+And MT103003 Click Button View TRX..........................................passed
+And MT103003 Click Button Modification......................................passed
+And MT103003 Validasi MOD...................................................failed
+And MT103003 Click Log Out..................................................skipped
+Then MT103003 Validasi Log In...............................................skipped
+
+StackTrace:
+org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Do you want to modified this Message..!!}
+  (Session info: chrome=140.0.7339.208): Do you want to modified this Message..!!
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7b6a097e409862214fcb93d54c5176b5, findElement {using=xpath, value=//tr[@class='odd']/td[text()='MOD']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\vensys\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53771}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53771/devtoo..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7b6a097e409862214fcb93d54c5176b5
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:136)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy26.getText(Unknown Source)
+	at com.danamon.project.page.HomePage.modValidation(HomePage.java:128)
+	at com.danamon.project.impl.ModifyMT103Testing.mt103003_validasi_mod(ModifyMT103Testing.java:94)
+	at ✽.MT103003 Validasi MOD(file:///C:/Users/vensys/IdeaProjects/T003CreateMT103/src/main/resources/features/CMT003%20MODVERAUTH%20MT103.feature:11)
+]]></failure>
+    </testcase>
+    <testcase classname="VER MT103 003" name="CMT004 MOD Message MT103" time="8.449">
+        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//img[@src='images/cmdanamon.png']&quot;}&#10;  (Session info: chrome=140.0.7339.208)&#10;For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception&#10;Build info: version: '4.19.1', revision: 'abe0ee07dc'&#10;System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.16'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [7b6a097e409862214fcb93d54c5176b5, findElement {using=xpath, value=//img[@src='images/cmdanamon.png']}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\vensys\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53771}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53771/devtoo..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 7b6a097e409862214fcb93d54c5176b5" type="org.openqa.selenium.NoSuchElementException"><![CDATA[When MT103004 Validasi Log In...............................................failed
+And MT103004 Input Username admin2 Yang Valid...............................skipped
+And MT103004 Input Password adminadmin Yang Valid...........................skipped
+And MT103004 Click Button Login Form........................................skipped
+And MT103004 Validasi Homepage..............................................skipped
+And MT103004 Click Button Modification Page.................................skipped
+And MT103004 Click Button View TRX..........................................skipped
+And MT103004 Click Body.....................................................skipped
+And MT103004 Input Reference AUTOMATIONMOD Yang Valid.......................skipped
+And MT103004 Click Button Validate..........................................skipped
+And MT103004 Click Button Save..............................................skipped
+And MT103004 Validasi VER...................................................skipped
+Then MT103004 Click Log Out.................................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//img[@src='images/cmdanamon.png']"}
+  (Session info: chrome=140.0.7339.208)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7b6a097e409862214fcb93d54c5176b5, findElement {using=xpath, value=//img[@src='images/cmdanamon.png']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\vensys\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53771}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53771/devtoo..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7b6a097e409862214fcb93d54c5176b5
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy26.getText(Unknown Source)
+	at com.danamon.project.page.LoginPage.LoginValidation(LoginPage.java:67)
+	at com.danamon.project.impl.ModifyMT103Testing.mt103004_validasi_log_in(ModifyMT103Testing.java:108)
+	at ✽.MT103004 Validasi Log In(file:///C:/Users/vensys/IdeaProjects/T003CreateMT103/src/main/resources/features/CMT003%20MODVERAUTH%20MT103.feature:19)
+]]></failure>
+    </testcase>
+    <testcase classname="VER MT103 003" name="CMT003 AUTH Message MT103" time="8.496">
+        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//img[@src='images/cmdanamon.png']&quot;}&#10;  (Session info: chrome=140.0.7339.208)&#10;For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception&#10;Build info: version: '4.19.1', revision: 'abe0ee07dc'&#10;System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.16'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [7b6a097e409862214fcb93d54c5176b5, findElement {using=xpath, value=//img[@src='images/cmdanamon.png']}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\vensys\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53771}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53771/devtoo..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 7b6a097e409862214fcb93d54c5176b5" type="org.openqa.selenium.NoSuchElementException"><![CDATA[When MT103005 Validasi Log In...............................................failed
+And MT103005 Input Username admin1 Yang Valid...............................skipped
+And MT103005 Input Password adminadmin Yang Valid...........................skipped
+And MT103005 Click Button Login Form........................................skipped
+And MT103005 Validasi Homepage..............................................skipped
+And MT103005 Click Button Verification Page.................................skipped
+And MT103005 Click Button View TRX..........................................skipped
+And MT103005 Click Button Auth..............................................skipped
+And MT103005 Validasi Auth..................................................skipped
+Then MT103005 Click Log Out.................................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//img[@src='images/cmdanamon.png']"}
+  (Session info: chrome=140.0.7339.208)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7b6a097e409862214fcb93d54c5176b5, findElement {using=xpath, value=//img[@src='images/cmdanamon.png']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\vensys\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53771}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53771/devtoo..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7b6a097e409862214fcb93d54c5176b5
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy26.getText(Unknown Source)
+	at com.danamon.project.page.LoginPage.LoginValidation(LoginPage.java:67)
+	at com.danamon.project.impl.ModifyMT103Testing.mt103005_validasi_log_in(ModifyMT103Testing.java:186)
+	at ✽.MT103005 Validasi Log In(file:///C:/Users/vensys/IdeaProjects/T003CreateMT103/src/main/resources/features/CMT003%20MODVERAUTH%20MT103.feature:37)
+]]></failure>
+    </testcase>
+</testsuite>

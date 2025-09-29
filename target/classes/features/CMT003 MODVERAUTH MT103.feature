@@ -14,7 +14,7 @@ Feature: VER MT103 003
     Examples:
       | username | password |
       | admin1 | adminadmin |
-Feature: MOD MT103 004
+
   Scenario:CMT004 MOD Message MT103
     When MT103004 Validasi Log In
     And MT103004 Input Username <username> Yang Valid
@@ -32,7 +32,7 @@ Feature: MOD MT103 004
     Examples:
       | username | password | reference |
       | admin2 | adminadmin | AUTOMATIONMOD |
-Feature: AUTH MT103 005
+
   Scenario:CMT003 AUTH Message MT103
     When MT103005 Validasi Log In
     And MT103005 Input Username <username> Yang Valid
