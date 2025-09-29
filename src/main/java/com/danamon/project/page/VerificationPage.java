@@ -27,7 +27,7 @@ import java.time.Duration;
 public class VerificationPage {
     private WebDriver driver;
 
-    @FindBy(how = How.CSS, using = "a[href*='ViewDataTransaksiOutgoing'][href*='id=1003185']")
+    @FindBy(how = How.CSS, using = "a[href*='ViewDataTransaksiOutgoing'][href*='id=1003198']")
     public WebElement trxview;
 
     @FindBy(how = How.CSS, using = "input#modified[name='modified']")

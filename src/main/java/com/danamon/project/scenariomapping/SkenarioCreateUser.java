@@ -11,7 +11,10 @@ Version1.0
 */
 public enum SkenarioCreateUser {
     T1("CMT001 Login Message"),
-    T2("CMT002 Create Message MT103");
+    T2("CMT002 Create Message MT103"),
+    T3("CMT003 VER Message MT103"),
+    T4("CMT004 MOD Message MT103"),
+    T5("CMT003 AUTH Message MT103");
     private String testName;
     private SkenarioCreateUser(String value) {
         testName = value;

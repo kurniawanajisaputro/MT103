@@ -15,7 +15,8 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
         features = {
                 "src/main/resources/features/CMT001 Login Message.feature",
-                "src/main/resources/features/CMT002 Create Message MT103.feature"
+                "src/main/resources/features/CMT002 Create Message MT103.feature",
+                "src/main/resources/features/CMT003 MOD,VER& AUTH MT103.feature"
         },
         glue = "com.danamon.project.impl",
         monochrome=true,
